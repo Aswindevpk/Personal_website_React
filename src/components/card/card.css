@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 36px;
+  height: 18rem;
+  width: 16rem;
+  background: rgba(222, 214, 255, 0.2);
+  border-radius: 16px;
+}
+
+.card h5 {
+margin-top: 2rem;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 28.43px;
+  line-height: 43px;
+  max-width: 200px;
+  color: var(--color-white);
+}
+
+.card p {
+  margin-top: 1rem;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color:var(--color-light);
+}
+
+@media screen and (max-width: 1300px) {
+  .card{
+    height: 12rem;
+    width: 10rem;
+  }
+  .card h5{
+    margin-top: 1rem;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .card p{
+    margin-top: 0.5rem;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .card img{
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card{
+    height: 10rem;
+    width: 8rem;
+  }
+  .card h5{
+    margin-top: .5rem;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .card p{
+    margin-top: 0.5rem;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .card img{
+    width: 2.5rem;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  .card{
+    margin-top: 2rem;
+    height: 14rem;
+    width: 12rem;
+  }
+  .card h5{
+    margin-top: 2rem;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .card p{
+    margin-top: 1rem;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .card img{
+    width: 3rem;
+  }
+  
+}
+

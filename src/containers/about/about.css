@@ -1,0 +1,84 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 6rem;
+}
+
+.about p {
+  text-align: center;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 50.52px;
+  line-height: 76px;
+}
+
+.about-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.about-profile p {
+  max-width: 800px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 21.33px;
+  line-height: 32px;
+  color: var(--color-light);
+}
+
+.about-education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  
+  .about p {
+    font-size: 38px;
+  
+  }
+  .about-profile img{
+    width: 8rem;
+  }
+  
+  .about-profile p {
+    text-align: right;
+    font-size: 16px;
+    line-height: 24px;
+    
+  }
+  
+  .about-education img:first-child{
+    width: 30rem;
+  }
+  .about-education img:last-child{
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-education img:last-child{
+    display: none;
+  }
+  .about-education img:first-child{
+    width: 25rem;
+  }
+  .about-profile {
+    flex-direction: column;
+  }
+  .about-profile p{
+    margin-top: rem;
+    text-align: center;
+    font-size: 14px;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+}
