@@ -39,7 +39,7 @@ function Skills() {
         ))
       }
       </div>
-      <div className="skills-logo">
+      <div data-aos="fade-up" className="skills-logo">
         <img src={figma} alt="" />
         <img src={react} alt="" />
         <img src={dj} alt="" />

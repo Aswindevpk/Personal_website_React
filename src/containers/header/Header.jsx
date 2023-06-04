@@ -13,8 +13,8 @@ function Header() {
     <div>
         <Navbar/>
         <div className='header'>
-          <div className='header-content'>
-            <h1>I'm Aswin Dev</h1>
+          <div data-aos="fade-up" className='header-content'>
+            <h1 >I'm Aswin Dev</h1>
             <h2>Full Stack Web Developer</h2>
             <div className='header-content_btn'>
               <div className='header-content_btn-folio'>
@@ -32,7 +32,7 @@ function Header() {
               <img src={linkedIn} alt="" />
             </div>
           </div>
-          <div className='header-graphics'>
+          <div data-aos="fade-up" className='header-graphics'>
             <img src={heroImg} alt="" />
           </div>
         </div>
