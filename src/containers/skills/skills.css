@@ -1,5 +1,5 @@
 .skills-card {
-  padding: 0rem 6rem 8rem 6rem;
+  padding: 0rem 6rem 8rem 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,4 +51,8 @@
 }
 
 @media screen and (max-width: 500px) {
+  .skills-logo{
+    margin-top: 2rem;
+    gap: 2rem;
+  }
 }
