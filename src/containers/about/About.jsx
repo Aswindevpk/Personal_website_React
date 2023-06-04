@@ -7,7 +7,7 @@ import aboutBg from '../../assets/about-bg.svg';
 
 function About() {
   return (
-    <div className='about'>
+    <div id='about' className='about'>
       <p data-aos="fade-up" >More About Me</p>
       <div data-aos="fade-up" className='about-profile'>
         <img src={profilePic} alt="" />

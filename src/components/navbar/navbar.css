@@ -78,6 +78,7 @@
     min-width: 80px;
     background-color: var(--color-text);
     border-radius: 5px;
+    z-index: 1;
 }
 .navbar-links_container-links{
     display: flex;
@@ -88,8 +89,12 @@
       font-family: var(--font-primary);
       font-size: 18px;
       padding: 0.5rem;
-    
   }
+  .navbar-menu_container-links p:hover{
+    color: var(--color-bg);
+    font-size: 18px;
+    font-weight: 500;
+}
   
 }
 

@@ -6,11 +6,18 @@ import './footer.css'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div id='footer' className='footer'>
       <div className='footer-social'>
-        <img src={gitHub} alt="" />
-        <img src={linkedIn} alt="" />
-        <img src={twitter} alt="" />
+      <a
+      href="https://github.com/Aswindevpk">
+                <img src={gitHub} alt="" />
+              </a>
+              <a href="https://twitter.com/AswinDev_pk">
+                <img src={twitter} alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/aswin-dev-p-k-266a63211/">
+                <img src={linkedIn} alt="" />
+              </a>
       </div>
       <p> © 2023 Aswin Dev  All rights reserved.</p>
     </div>
