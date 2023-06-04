@@ -23,7 +23,7 @@ function Header() {
                 <p>My Portfolio</p>
               </div>
             </a>
-            <a href="https://wa.me/9995338872">
+            <a href="https://wa.me/+919995338872">
               <div className="header-content_btn-talk">
                 <img src={chatOutline} alt="" srcset="" />
                 <p>Let's Talk</p>
