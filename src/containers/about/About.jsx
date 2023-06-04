@@ -11,7 +11,7 @@ function About() {
       <p data-aos="fade-up" >More About Me</p>
       <div data-aos="fade-up" className='about-profile'>
         <img src={profilePic} alt="" />
-        <p>I’m A Full Stack developer from kerala, Malappuram having a good knowlege in web frameworks, networks, database, github etc..</p>
+        <p>I’m A Full Stack Developer from kerala, Malappuram having a good knowldege in web frameworks, networks, databases, git etc..</p>
       </div>
       <div data-aos="fade-up" className='about-education'>
         <img src={eduMap} alt="" />
