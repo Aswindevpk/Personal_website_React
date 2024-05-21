@@ -10,7 +10,7 @@ jobs:
     env:
       BUCKET: aswindev.in
       DIST: build
-      REGION: ap-sout-1
+      REGION: ap-south-1
       DIST_ID: E3VCVOBBHMQ8C2
 
     steps:
