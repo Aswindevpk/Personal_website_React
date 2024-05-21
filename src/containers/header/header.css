@@ -12,6 +12,10 @@
   justify-content: flex-end;
 }
 
+.header-graphics img{
+  max-width: 350px;
+}
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -103,7 +107,7 @@
     padding: 4rem 6rem;
   }
   .header-graphics img{
-    max-width: 450px;
+    max-width: 300px;
   }
   .header h1 {
     font-size: 48px;
@@ -170,7 +174,7 @@
   }
 
   .header-graphics img {
-    height: 60%;
+    max-width: 200px;
   }
   .header h1 {
     font-size: 38px;

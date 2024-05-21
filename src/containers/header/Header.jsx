@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Navbar } from "../../components";
-import heroImg from "../../assets/heroImg.svg";
+import heroImg from "../../assets/hero-img.png";
 import folderOutline from "../../assets/folder-outline.svg";
 import chatOutline from "../../assets/chatbubbles-outline.svg";
 import twitter from "../../assets/twitter.svg";
