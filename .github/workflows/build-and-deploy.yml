@@ -1,47 +1,47 @@
-name: Build and Deploy to CloudFront
+---
+name: Build and Deploy React App to CloudFront
 on:
-    push:
-        branches: [master]
-
+  push:
+    branches: [ master ]
 jobs:
-    build-and-deploy:
-        name: Build and Deploy
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
     env:
-        BUCKET: aswindev.in
-        DIST: build
-        REGION: ap-south-1
-        DIST_ID: E3VCVOBBHMQ8C2
-    
+      BUCKET: aswindev.in
+      DIST: build
+      REGION: ap-south-1
+      DIST_ID: E3VCVOBBHMQ8C2
+
     steps:
-        - name: Checkout
-        uses: actions/checkout@v2 
+    - name: Checkout
+      uses: actions/checkout@v2
 
-        - name: Configure aws Credentials
-        uses: actions/configure-aws-credentials@v1
-        with:
-            aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-            aws-secret-access-key-id: ${{secrets.AWS_SECRET_ACCESS_KEY_ID}}\
-            aws-region: ${{env.REGION}}
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.REGION }}
 
-        - name: Install Dependencies
-        run: |
-            node --version
-            npm ci --production
+    # - uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '14'
 
-        - name: Build Static Website
-        run: npm run build
+    - name: Install Dependencies
+      run: |
+        node --version
+        npm ci --production
 
-        - name: Copy files to production website
-        run: |
-            aws s3 sync --delete ${{env.DIST}} s3://${{env.BUCKET}}
+    - name: Build Static Website
+      run: npm run build
 
-        - name: Copy file to production website
-        run: |
-            aws cloudfront create-invalidation \
-            --distribution-id ${{env.DIST_ID}}
-            --paths "/*"
+    - name: Copy files to the production website with the AWS CLI
+      run: |
+        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-
-
-
+    - name: Copy files to the production website with the AWS CLI
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ env.DIST_ID }} \
+          --paths "/*"
