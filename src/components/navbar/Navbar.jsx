@@ -35,13 +35,19 @@ function Navbar() {
         <div className="navbar-menu">
           <div className="navbar-menu_toggle">
             {toggleMenu ? (
-              <a onClick={() => setToggleMenu(false)}>
-                <img src={toggleBarClose} alt="" />
-              </a>
+              <button
+                onClick={() => setToggleMenu(false)}
+                style={{ all: "unset", cursor: "pointer" }}
+              >
+                <img src={toggleBarClose} alt="Close menu" />
+              </button>
             ) : (
-              <a onClick={() => setToggleMenu(true)}>
-                <img src={toggleBar} alt="" />
-              </a>
+              <button
+                onClick={() => setToggleMenu(true)}
+                style={{ all: "unset", cursor: "pointer" }}
+              >
+                <img src={toggleBar} alt="Open menu" />
+              </button>
             )}
           </div>
           {toggleMenu ? (
